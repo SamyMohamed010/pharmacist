@@ -37,7 +37,7 @@ function Change() {
                             <div className="card" key={product.id}>
                                 <div className="cardHead">
                                     <Link href={`/changeInfo/${encodeURIComponent(product.id)}`}>
-                                        <Image src={product.image} alt="testImage" fill style={{objectFit: "cover"}} />
+                                        <Image src={product.image} alt="testImage" width={150} height={150} />
                                     </Link>
                                 </div>
                                 <div className="cardBody">
