@@ -34,12 +34,12 @@ export default function Home() {
     },
     {
       id: 2,
-      text: "Hair care",
+      text: "Hair Care",
       image: hairImage
     },  
     {
       id: 3,
-      text: "Skin care",
+      text: "Skin Care",
       image: skincare
     },
     {
