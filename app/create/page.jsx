@@ -36,6 +36,7 @@ function Create() {
         }
     }
 
+
     return(
         <div className="main">
             <Nav openNav={openNav} setOpenNav={setOpenNav}/>

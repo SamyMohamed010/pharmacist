@@ -1,5 +1,5 @@
 .btn {
-    width: 100%;
+    width: fit-content;
     border: none;
     padding: 5px;
     display: flex;

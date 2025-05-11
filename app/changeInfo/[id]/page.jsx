@@ -2,7 +2,7 @@
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 import { db } from "@/app/firebase";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, where } from "firebase/firestore";
 import Image from "next/image";
 import { IoMdClock } from "react-icons/io";
 import { GiShop } from "react-icons/gi";
@@ -15,6 +15,9 @@ function ChangeInfo({params}) {
     const [openNav, setOpenNav] = useState(false)
     const id = decodeURIComponent(params.id)
     const [products, setProducts] = useState([])
+    const [userName, setUserName] = useState('')
+    const [phone, setPhone] = useState('')
+    
 
     useEffect(() => {
         const getProductInfo = async() => {
@@ -23,6 +26,14 @@ function ChangeInfo({params}) {
             setProducts([{...productData.data(), id: productData.id}])
         }
         getProductInfo()
+        if(typeof window !== "undefined") {
+            const name = localStorage.getItem("name")
+            const phone = localStorage.getItem("phone")
+            if(name) {
+                setUserName(name)
+                setPhone(phone)
+            }
+        }
     }, [id, products])
 
     return(
@@ -37,9 +48,12 @@ function ChangeInfo({params}) {
                     </div>
                     <div className={styles.productInfo}>
                         <h2>{product.name}</h2>
+                        <p>price: <strong>EGP {product.price}</strong></p>
                         <p>Descreption: <strong>{product.description}</strong></p>
+                        <p>Change With: <strong>{product.change}</strong></p>
+                        <p>User Name: <strong>{product.userName}</strong></p>
+                        <p>phone Number: <strong>{product.phone}</strong></p>
                     </div>
-                    <ChangeBtn/>
                 </div>
                 )
                 

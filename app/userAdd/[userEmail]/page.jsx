@@ -5,7 +5,7 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaImage } from "react-icons/fa6";
 import { db } from "@/app/firebase";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 
 function UserAdd({params}) {
@@ -13,6 +13,10 @@ function UserAdd({params}) {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
+    const [price,setPrice]=useState("")
+    const [change,setChange]=useState("")
+    const [phone,setPhone]=useState("")
+    const [userName,setUserName]=useState("")
 
     const  handleUploadImage = async(event) => {
         const file = event.target.files[0]
@@ -27,22 +31,29 @@ function UserAdd({params}) {
         })
         const uploadedImageUrl = await res.json()
         setImage(uploadedImageUrl.url)
-    }
+    } 
 
     const handleAddProduct = async() => {
-        if(name !== "" && description !== "") {
+        if(name !== "" && description !== "" && change !== "") {
             await addDoc(collection(db, "userProducts"), {
                 description,
                 name,
                 image,
-                email: userEmail
+                email: userEmail,
+                price,
+                change,
+                phone,
+                userName
             })
             alert("Product has been added successfully")
             setName("")
             setDescription("")
+            setPrice("")
+            setChange("")
+            setUserName("")
+            setPhone("")
         }
     }
-
     return(
         <div className="main">
             <header className={styles.header}>
@@ -53,7 +64,7 @@ function UserAdd({params}) {
                     <h2>Add New Product</h2>
                 </div>
                 <div className={styles.rightSide}>
-                    <Link href={"/"} onClick={() => typeof window !== "undefined" ? localStorage.removeItem("email") : ""} className={styles.headerLink}><RiLogoutCircleLine/></Link>
+                    <Link href={"/"} onClick={() => typeof window !== "undefined" ? localStorage.clear() : ""} className={styles.headerLink}><RiLogoutCircleLine/></Link>
                 </div>
             </header>
             <div className={styles.addContent}>
@@ -71,6 +82,22 @@ function UserAdd({params}) {
                 <div className="inputContainer">
                     <label>Description</label>
                     <input value={description} type="text" onChange={(e) => setDescription(e.target.value)} placeholder="Product Description"/>
+                </div>
+                <div className="inputContainer">
+                    <label>Change With</label>
+                    <input value={change} type="text" onChange={(e) => setChange(e.target.value)} placeholder="Change With"/>
+                </div>
+                <div className="inputContainer">
+                    <label>Price</label>
+                    <input value={price} type="number" onChange={(e) => setPrice(e.target.value)} placeholder="Price"/>
+                </div>
+                <div className="inputContainer">
+                    <label>Phone </label>
+                    <input value={phone} type="number" onChange={(e) => setPhone(e.target.value)} placeholder="phone"/>
+                </div>
+                <div className="inputContainer">
+                    <label>User Name  </label>
+                    <input value={userName} type="text" onChange={(e) => setUserName(e.target.value)} placeholder="userName"/>
                 </div>
                 <button className={styles.addBtn} onClick={handleAddProduct}>Add New Product</button>
             </div>

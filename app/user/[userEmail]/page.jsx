@@ -5,6 +5,7 @@ import Image from "next/image";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
+import { MdPublishedWithChanges } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { db } from "@/app/firebase";
 import { collection, getDocs, query, where,deleteDoc, doc, onSnapshot } from "firebase/firestore";
@@ -48,7 +49,7 @@ function UserEmail({params}) {
                     {userData.map(user => {return(<h2 key={user.id}>Welcome : {user.userName}</h2>)})}
                 </div>
                 <div className={styles.rightSide}>
-                    <Link href={"/"} onClick={() => typeof window !== "undefined" ? localStorage.removeItem("email") : ""} className={styles.headerLink}><RiLogoutCircleLine/></Link>
+                     <Link href={"/"} onClick={() => typeof window !== "undefined" ? localStorage.clear() : ""} className={styles.headerLink}><RiLogoutCircleLine/></Link>
                 </div>
             </header>
             <div className={styles.productsContent}>
