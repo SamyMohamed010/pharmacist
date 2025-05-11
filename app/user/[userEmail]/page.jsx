@@ -54,7 +54,7 @@ function UserEmail({params}) {
             <div className={styles.productsContent}>
                 {userProducts.map(product => {
                     return(
-                        <div className="card">
+                        <div className="card" key={product.id}>
                             <div className="cardHead">
                                 <Image src={product.image} alt="testImage" width={150} height={150} />
                             </div>

@@ -121,7 +121,7 @@ function Search() {
             <div className={styles.searchContent}>
                 {filterd.map(product => {
                     return(
-                        <div className="card">
+                        <div className="card" key={product.id}>
                         <div className="cardHead">
                             <Link href={`/info/${encodeURIComponent(product.id)}`}>
                                 <Image src={product.image} alt="ProductImage" width={150} height={150} />

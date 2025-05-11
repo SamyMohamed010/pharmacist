@@ -36,7 +36,7 @@ function CategoryName ({params}) {
                 <div className={styles.categoryContent}>
                     {products.map(product => {
                         return(
-                            <div className="card">
+                            <div className="card" key={product.id}>
                             <div className="cardHead">
                                 <Link href={`/info/${encodeURIComponent(product.id)}`}>
                                     <Image src={product.image} alt="ProductIame" width={150} height={150} />

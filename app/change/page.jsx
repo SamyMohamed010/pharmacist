@@ -34,7 +34,7 @@ function Change() {
                 <div className={styles.categoryContent}>
                     {changeData.map(product => {
                         return(
-                            <div className="card">
+                            <div className="card" key={product.id}>
                                 <div className="cardHead">
                                     <Link href={`/changeInfo/${encodeURIComponent(product.id)}`}>
                                         <Image src={product.image} alt="testImage" fill style={{objectFit: "cover"}} />
