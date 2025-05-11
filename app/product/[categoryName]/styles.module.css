@@ -1,0 +1,19 @@
+.categorySction {
+    width: 100%;
+    min-height: calc(100vh - 162px);
+    padding: 30px 2%;
+}
+.categoryTitle h2 {
+    font-size: 30px;
+    color: #333;
+}
+.categoryContent {
+    width: 100%;
+    height: fit-content;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}

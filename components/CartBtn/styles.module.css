@@ -1,0 +1,29 @@
+.btn {
+    width: fit-content;
+    border: 1px solid #333;
+    color: black;
+    border-radius: 28px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.added {
+    width: 40%;
+    border: 1px solid #333;
+    color: white;
+    background-color: var(--darck-green);
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+
+/* @media(max-width: 767px) {
+    .btn {
+        font-size: 18px;
+    }
+    .added {
+        font-size: 18px;
+    }
+} */

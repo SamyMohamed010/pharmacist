@@ -1,0 +1,179 @@
+.header {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.headerContainer {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--gray-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+}
+.leftSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobileIcons {
+    display: none;
+}
+.logoImage {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+.logoLink {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: var(--darck-green);
+}
+.leftSide p {
+    color: rgba(0, 0, 0, 0.4);
+    margin-left: 15px;
+    font-size: 30px;
+}
+.middleSide {
+    width: 450px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 28px;
+    padding-left: 10px;
+}
+.middleSide p {
+    width: 40px;
+    height: 40px;
+    background-color: var(--darck-green);
+    color: var(--green-color);
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.middleSide input {
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.container {
+    display: none;
+}
+.rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.headerLinks {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    border-radius: 29px;
+    transition: .3s;
+}
+.headerLinks:hover {
+    background-color: var(--green-color);
+}
+
+@media(max-width: 1024px) {
+    .header {
+        padding: 10px;
+    }
+    .headerContainer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    .middleSide {
+        display: none;
+    }
+    .leftSide {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .mobileIcons {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .leftSide p {
+        display: none;
+    }
+    .logoImage {
+        width: 50px;
+        height: 50px;
+    }
+    .logoLink {
+        font-size: 25px;
+    }
+    .rightSide {
+        display: none;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container button {
+        background-color: transparent;
+        color: var(--darck-green);
+        font-size: 25px;
+        border: none;
+    }
+    .inputContainer input {
+        width: 60%;
+        border: none;
+        outline: none;
+        padding: 5px;
+    }
+    .inputContainer {
+        width: 80%;
+        height: 40px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 28px;
+        padding-left: 10px;
+    }
+    .inputContainer p {
+        width: 30px;
+        height: 30px;
+        background-color: var(--darck-green);
+        color: var(--green-color);
+        font-size: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

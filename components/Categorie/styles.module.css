@@ -1,0 +1,62 @@
+.categorie {
+    position: relative;
+    top: -60px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 50px;
+    border-radius: 40px 40px 0 0;
+}
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.cardHead {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categorieImage {
+    width: 140px;
+    height: 140px;
+}
+.cardHead p {
+    font-size: 30px;
+    color: black;
+}
+.cardLink {
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+.cardLink:hover {
+    color: var(--darck-green);
+}
+
+@media(max-width: 767px) {
+    .categorie {
+        gap: 20px;
+    }
+    .cardHead {
+        width: 100px;
+        height: 100px;
+    }
+    .categorieImage {
+        width: 100px;
+        height: 100px;
+    }
+}

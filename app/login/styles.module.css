@@ -1,0 +1,35 @@
+.btnContainer {
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.btnContainer button{
+    width: 100%;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: var(--darck-green);
+    color: white;
+    border: none;
+    border-radius: 28px;
+}
+.btn {
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    background-color: transparent;
+}
+.btn span:first-child {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+@media(max-width: 767px) {
+    .btn span:first-child {
+        font-size: 17px;
+    }
+}

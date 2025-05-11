@@ -1,0 +1,74 @@
+.reviews {
+    width: 100%;
+    height: fit-content;
+    background-color: #E5F8FF;
+    padding: 50px 2%;
+}
+.title {
+    padding-bottom: 30px;
+}
+.title h2 {
+    font-size: 35px;
+    color: black;
+}
+.text {
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    gap: 5px;
+}
+.text p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #333;
+}
+.text p span {
+    color: var(--darck-green);
+}
+.stars {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+.stars p {
+    background-color: var(--darck-green);
+    color: white;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewsContent {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper {
+    width: 100% !important;
+    padding: 15px !important;
+}
+.card {
+    width: 250px;
+    min-height: 350px;
+    background-color: var(--gray-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+}
+.cardHead p {
+    color: #333;
+    font-size: 18px;
+}
+
+@media(max-width: 767px) {
+    .card { 
+        width: 230px;
+    }
+}

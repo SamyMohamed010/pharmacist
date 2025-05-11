@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cal Sans";
+}
+:root {
+  --green-color: #b9f781;
+  --darck-green: #004d25;
+  --gray-color: #e6e5e5;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.title h2 {
+  color: #333;
+  font-size: 35px;
+}
+.titleLink {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--darck-green);
+}
+.titleLink span:first-child {
+  font-size: 17px;
+}
+.card {
+  width: 200px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.cardHead {
+  width: 200px;
+  height: 200px;
+  background-color: var(--gray-color);
+  border-radius: 28px 28px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardBody {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+.cardContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.inputContainer label {
+  width: 100%;
+}
+.inputContainer input {
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 28px;
+  font-size: 18px;
+  outline: none;
+  padding: 7px;
+}
+.inputContainer select {
+  width: 100%;
+  border: 1px solid #333;
+  padding: 7px;
+  border-radius: 28px;
+  font-size: 18px;
+}
+.formContent {
+  width: 100%;
+  height: fit-content;
+  padding: 50px 2%;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media(max-width: 767px) {
+  .title h2 {
+      font-size: 25px;
+  }
+  .titleLink { 
+      font-size: 18px;
+  }
+  .titleLink span:first-child {
+      font-size: 18px;
+  }
+}
