@@ -44,6 +44,7 @@ function Change() {
                                     <p>{product.name}</p>
                                     <div className="cardContent">
                                         <ChangeBtn/>
+                                        <strong>EGP {product.price}</strong>
                                     </div>
                                 </div>
                             </div>

@@ -91,7 +91,7 @@ function Add() {
                         <option value="Skin Care">Skin Care</option>
                         <option value="Baby Food">Baby Food</option>
                         <option value="Makeup">Makeup</option>
-                        <option value="Supplements">Supplements</option>
+                        <option value="Vitamins">Vitamins</option>
                         <option value="Deals">Deals</option>
                     </select>
                 </div>
