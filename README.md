@@ -43,7 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 [Watch the demo video](https://drive.google.com/file/d/1JK7KVsOmeN2HGIJzbl_VbBQ9Cc6QSFJP/view?usp=sharing)
 
 ## 📊 Presentation
-- [Download the presentation PDF](pharmacist-main\Pharmacist.pptx)
+- [Download the presentation PDF](./docs/presentation.pptx)
 
 
 ## 👥 Team Members
