@@ -34,8 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Pharma Health - Graduation Project
+# Pharmacist - Graduation Project
+ 
 
+## 👥 Team Members
+- Samy Mohamed Samy (CS/PHYS).
+- yehia fadl ali fadl (CS/PHYS).
+-Abdelrhman Taha Saad Taha (CS/PHYS).
+-Ahmed Anter Sayed Awad (CS/STAT)
 ## 🔗 GitBook Documentation
 [View the GitBook here](https://yehias-organization.gitbook.io/pharmacist)
 
@@ -46,13 +52,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - [Download the presentation (PPTX)](./docs/Pharmacist.pptx)
 
-
-
-## 👥 Team Members
-- Samy Mohamed Samy (CS/PHYS).
-- yehia fadl ali fadl (CS/PHYS).
--Abdelrhman Taha Saad Taha (CS/PHYS).
--Ahmed Anter Sayed Awad (CS/STAT)
-
 ## 📅 Submission Date
 23 May 2025
+## 📅 Discussion date
+16 June 2025
