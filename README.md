@@ -40,8 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## 👥 Team Members
 - Samy Mohamed Samy (CS/PHYS).
 - yehia fadl ali fadl (CS/PHYS).
--Abdelrhman Taha Saad Taha (CS/PHYS).
--Ahmed Anter Sayed Awad (CS/STAT)
+- Abdelrhman Taha Saad Taha (CS/PHYS).
+- Ahmed Anter Sayed Awad (CS/STAT).
 ## 🔗 GitBook Documentation
 [View the GitBook here](https://yehias-organization.gitbook.io/pharmacist)
 
