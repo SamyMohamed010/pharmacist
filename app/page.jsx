@@ -20,6 +20,7 @@ import ProductsCollection from "@/components/ProductsCollection/page";
 import Reviews from "@/components/Reviews/page";
 import Questions from "@/components/Questions/page";
 import Footer from "@/components/Footer/page";
+import Donations from "../components/Donations/page"
 
 export default function Home() {
   const productsCollection = collection(db, "products")
@@ -83,6 +84,7 @@ export default function Home() {
         <Deals products={products} setProducts={setProducts}/>
         <Banner/>
         <ChangeSection userProducts={userProducts} setUserProducts={setUserProducts}/>
+        <Donations userProducts={userProducts} setUserProducts={setUserProducts}/>
         <Cards/>
         <ProductsCollection products={products} setProducts={setProducts}/>
         <Reviews/>

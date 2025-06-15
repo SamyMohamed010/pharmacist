@@ -17,6 +17,7 @@ function UserAdd({params}) {
     const [change,setChange]=useState("")
     const [phone,setPhone]=useState("")
     const [userName,setUserName]=useState("")
+    const [type, setType] = useState('Exchange')
 
     const  handleUploadImage = async(event) => {
         const file = event.target.files[0]
@@ -43,7 +44,8 @@ function UserAdd({params}) {
                 price,
                 change,
                 phone,
-                userName
+                userName,
+                type
             })
             alert("Product has been added successfully")
             setName("")
@@ -52,6 +54,7 @@ function UserAdd({params}) {
             setChange("")
             setUserName("")
             setPhone("")
+            setType('Exchange')
         }
     }
     return(
@@ -98,6 +101,13 @@ function UserAdd({params}) {
                 <div className="inputContainer">
                     <label>User Name  </label>
                     <input value={userName} type="text" onChange={(e) => setUserName(e.target.value)} placeholder="userName"/>
+                </div>
+                <div className="inputContainer">
+                    <label>Type</label>
+                    <select value={type} onChange={(e) => setType(e.target.value)}>
+                        <option value="Exchange">Exchange</option>
+                        <option value="Donations">Donations</option>
+                    </select>
                 </div>
                 <button className={styles.addBtn} onClick={handleAddProduct}>Add New Product</button>
             </div>

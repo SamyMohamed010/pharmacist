@@ -16,7 +16,22 @@ function Create() {
     const router = useRouter()
 
     const handleAddUser = async() => {
-        if(userName !== "" && email !== "" && password !== "") {
+            if(!userName) {
+                alert('Please enter your name')
+                return
+            }
+            if(!email) {
+                alert('Please enter your email')
+                return
+            }
+            if(!email.includes("@")) {
+                alert('Email must contain @')
+                return
+            }
+            if(!password) {
+                alert('Please enter your password')
+                return
+            }
             const userRef = collection(db, "users")
             const q = query(userRef, where("email", "==", email))
             const querySnapshot = await getDocs(q)  
@@ -33,7 +48,6 @@ function Create() {
                 setEmail("")
                 setPassword("")
             }
-        }
     }
 
 

@@ -1,0 +1,12 @@
+.chnangeContainer {
+    width: 100%;
+    height: fit-content;
+    padding: 0 2%;
+}
+.title {
+    padding-bottom: 30px;
+}
+.title h2 {
+    font-size: 35px;
+    color: #333;
+}

@@ -10,11 +10,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-function ChangeSection({userProducts, setUserProducts}) {
+function Donations({userProducts, setUserProducts}) {
     return(
         <section className={styles.chnangeContainer}>
             <div className="title">
-                <h2>Exchange Products</h2>
+                <h2>Donations</h2>
                 <Link href={'/change'} className='titleLink'>
                     <span>See All Products</span>
                     <span><FaArrowRightLong/></span>
@@ -28,8 +28,8 @@ function ChangeSection({userProducts, setUserProducts}) {
                     768: {slidesPerView: 1.5},
                     1024: {slidesPerView: 5}
                 }}
-            >
-                {userProducts.filter((product) => product.type === "Exchange").map(product => {
+        >       
+        {userProducts.filter((product) => product.type === "Donations").map(product => {
                     return(
                         <SwiperSlide key={product.id}>
                             <div className="card">
@@ -42,36 +42,16 @@ function ChangeSection({userProducts, setUserProducts}) {
                                     <p>{product.name}</p>
                                     <div className="cardContent">
                                         <ChangeBtn/>
-                                        <strong>EGP {product.price}</strong>
+                                        <p>For free</p>
                                     </div>
                                 </div>
                             </div>
                         </SwiperSlide>
                     )
                 })}
-                {/* {userProducts.map(product => {
-                    return(
-                        <SwiperSlide key={product.id}>
-                            <div className="card">
-                                <div className="cardHead">
-                                    <Link href={`/changeInfo/${encodeURIComponent(product.id)}`}>
-                                        <Image src={product.image} alt="testImage" width={150} height={150} />
-                                    </Link>
-                                </div>
-                                <div className="cardBody">
-                                    <p>{product.name}</p>
-                                    <div className="cardContent">
-                                        <ChangeBtn/>
-                                        <strong>EGP {product.price}</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    )
-                })} */}
             </Swiper>
         </section>
     )
 }
 
-export default ChangeSection;
+export default Donations;
