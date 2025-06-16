@@ -10,6 +10,7 @@ import { collection, addDoc } from "firebase/firestore";
 
 function UserAdd({params}) {
     const userEmail = decodeURIComponent(params.userEmail)
+    const [active, setActive] = useState(false)
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
@@ -87,10 +88,17 @@ function UserAdd({params}) {
                     <input value={description} type="text" onChange={(e) => setDescription(e.target.value)} placeholder="Product Description"/>
                 </div>
                 <div className="inputContainer">
+                    <label>Type</label>
+                    <select value={type} onChange={(e) => setType(e.target.value)}>
+                        <option value="Exchange">Exchange</option>
+                        <option value="Donations">Donations</option>
+                    </select>
+                </div>
+                <div className={type === "Exchange" ? "inputType active" : "inputType"}>
                     <label>Change With</label>
                     <input value={change} type="text" onChange={(e) => setChange(e.target.value)} placeholder="Change With"/>
                 </div>
-                <div className="inputContainer">
+                <div className={type === "Exchange" ? "inputType active" : "inputType"}>
                     <label>Price</label>
                     <input value={price} type="number" onChange={(e) => setPrice(e.target.value)} placeholder="Price"/>
                 </div>
@@ -102,13 +110,7 @@ function UserAdd({params}) {
                     <label>User Name  </label>
                     <input value={userName} type="text" onChange={(e) => setUserName(e.target.value)} placeholder="userName"/>
                 </div>
-                <div className="inputContainer">
-                    <label>Type</label>
-                    <select value={type} onChange={(e) => setType(e.target.value)}>
-                        <option value="Exchange">Exchange</option>
-                        <option value="Donations">Donations</option>
-                    </select>
-                </div>
+
                 <button className={styles.addBtn} onClick={handleAddProduct}>Add New Product</button>
             </div>
         </div>

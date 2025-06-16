@@ -48,9 +48,9 @@ function ChangeInfo({params}) {
                     </div>
                     <div className={styles.productInfo}>
                         <h2>{product.name}</h2>
-                        <p>price: <strong>EGP {product.price}</strong></p>
+                        <p className={product.type === "Exchange" ? `${styles.pInfo} ${styles.active}` : `${styles.pInfo}`}>price: <strong>EGP {product.price}</strong></p>
                         <p>Descreption: <strong>{product.description}</strong></p>
-                        <p>Change With: <strong>{product.change}</strong></p>
+                        <p className={product.type === "Exchange" ? `${styles.pInfo} ${styles.active}` : `${styles.pInfo}`}>Change With: <strong>{product.change}</strong></p>
                         <p>User Name: <strong>{product.userName}</strong></p>
                         <p>phone Number: <strong>{product.phone}</strong></p>
                     </div>

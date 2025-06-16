@@ -23,6 +23,12 @@
     gap: 15px;
     padding: 20px 0;
 }
+.productInfo .pInfo {
+    display: none;
+}
+.productInfo .pInfo.active {
+    display: block;
+}
 .informations {
     width: 100%;
     height: fit-content;

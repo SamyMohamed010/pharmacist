@@ -79,6 +79,28 @@
   flex-direction: column;
   gap: 5px;
 }
+.inputType {
+  display: none;
+}
+.inputType label {
+    width: 100%;
+}
+.inputType input {
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 28px;
+  font-size: 18px;
+  outline: none;
+  padding: 7px;
+}
+.inputType.active {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
 .inputContainer label {
   width: 100%;
 }
